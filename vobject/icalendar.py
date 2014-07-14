@@ -9,6 +9,7 @@ try:
 except ImportError:
     from six import StringIO
 
+import six
 import dateutil.rrule
 import dateutil.tz
 import datetime
@@ -39,7 +40,7 @@ __tzidMap={}
 
 def toUnicode(s):
     """Take a string or unicode, turn it into unicode, decoding as utf-8"""
-    if isinstance(s, str):
+    if isinstance(s, six.binary_type):
         s = s.decode('utf-8')
     return s
 

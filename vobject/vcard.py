@@ -1,12 +1,12 @@
 """Definitions and behavior for vCard 3.0"""
 
-import behavior
+from . import behavior
 import itertools
 
-from base import VObjectError, NativeError, ValidateError, ParseError, \
+from .base import VObjectError, NativeError, ValidateError, ParseError, \
                     VBase, Component, ContentLine, logger, defaultSerialize, \
                     registerBehavior, backslashEscape, ascii
-from icalendar import stringToTextValues
+from .icalendar import stringToTextValues
 
 #------------------------ vCard structs ----------------------------------------
 
